@@ -39,7 +39,8 @@ class InAppLocalhostServer {
         this._server = server;
 
         server.listen((HttpRequest request) async {
-          var body = [] as List<int>;
+          //var body = [] as List<int>;
+          List<int> body = [];
           var path = request.requestedUri.path;
           path = (path.startsWith('/')) ? path.substring(1) : path;
           path += (path.endsWith('/')) ? 'index.html' : '';
